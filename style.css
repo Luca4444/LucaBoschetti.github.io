@@ -1,7 +1,7 @@
 
 
 #container{background-color: #ddd; padding: 25px;}
-#content{width: 100px; height: 100px; background-color: red;}
+#content{width: 50px; height: 100px; background-color: red;}
 
 body {
     --s: 25vmin;
