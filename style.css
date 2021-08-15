@@ -12,5 +12,7 @@
     background-image: url(http://placekitten.com/400/200);
     background-position: 0px 0px;
     background-repeat: repeat-x;
-    animation: animatedBackground 10s linear infinite alternate;
-}
+    animation: animatedBackground 10s linear infinite alternate;}
+
+.container{background-color: #ddd; padding: 25px;}
+.content{width: 100px; height: 100px; background-color: red;}
