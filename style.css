@@ -19,6 +19,7 @@ h1 {
     padding: 30px;
     font-family: 'Tourney',sans-serif;
     font-size:40px;
+    white-space: nowrap;
 
 
 }
