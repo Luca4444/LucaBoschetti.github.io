@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" style="background: aliceblue">
 <link href='https://fonts.googleapis.com/css?family=Tourney' rel='stylesheet'>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
 
 <head>
     <meta charset="UTF-8">
@@ -11,9 +14,117 @@
 
 <body>
 <div></div>
-<h1 style="">Luca's MIT Portafolio</h1>
-    <div class="container">
-        <input class = "pimage" type="image" src="IMG_5609.jpg" style="" onclick="location.href='https://github.com/Luca4444';">
+
+<div class="row">
+    <div class="column">
+
+        <div class="sub1">
+            <div class="w3-card w3-round w3-white">
+                <h1 style="font-size:2.5vw;font-family: 'Tourney',sans-serif;">Projects</h1>
+            </div>
+        </div>
+        <a href="https://luca4444.github.io/MIT/src/week7/PacMen%20Exercise/">
+            <div class="cards w3-card-4 w3-round w3-pale-yellow">
+                <header id="head-pac" class="w3-container w3-orange w3-round w3-hover-indigo">
+                    <p class="card-text-title" style="color: white">PacMen Exercise</p>
+                    <img id="PacMan" src="static/PacMan1.png">
+                </header>
+                <p class="card-text">
+                    Add and watch PacMan's moving randomly around your screen
+                </p>
+            </div>
+        </a>
+        <a href="https://luca4444.github.io/MIT/src/week10/hanoi%20tower/">
+            <div class="cards w3-card-4 w3-round w3-sand">
+                <header class="w3-container w3-red w3-round w3-hover-light-blue">
+                    <p class="card-text-title">Hanoi Tower</p><img id="hanoi" src="static/hanoi.gif">
+                </header>
+                <p class="card-text">
+                    Choose the number of blocks you want in you hanoi tower and watch the solution
+                </p>
+            </div>
+        </a>
+        <a href="https://luca4444.github.io/MIT/src/Real%20Time%20Bus%20Tracker/ ">
+            <div class="cards w3-card-4 w3-round w3-light-gray">
+                <header class="w3-container w3-blue-gray w3-round w3-hover-deep-orange">
+                    <p class="card-text-title">Real Time Bus Tracker</p><img id="bus" src="static/bus.gif" >
+                </header>
+                <p class="card-text">
+                    Track buses between MIT and Harvard live!
+                </p>
+            </div>
+        </a>
+        <a href="https://luca4444.github.io/MIT/src/week8/eye-exercise/">
+            <div class="cards w3-card-4 w3-round w3-pale-blue">
+                <header id="eye-container" class="w3-container w3-indigo w3-round w3-hover-amber">
+                    <p class="card-text-title">Eyes Exercise</p>
+                    <div class="eyes">
+                        <div class="eye">
+                            <div class="ball"></div>
+                        </div>
+                        <div class="eye">
+                            <div class="ball"></div>
+                        </div>
+                    </div>
+                </header>
+                <p class="card-text">
+                    Watch some eyes on the screen follow your mouse movements
+                </p>
+            </div>
+        </a>
     </div>
+
+    <div class="column">
+        <div class="title">
+            <div class="w3-card w3-round w3-white">
+                <h1 style="font-size:2.5vw;font-family: 'Tourney',sans-serif;">Luca's MIT Portafolio</h1>
+            </div>
+        </div>
+        <div class="container">
+            <input class = "pimage w3-round" type="image" src="static/IMG_5609.jpg" style="" onclick="location.href='https://github.com/Luca4444';">
+        </div>
+        <div id="bio" class="w3-card w3-round w3-pale-blue">
+            <header class="w3-container w3-blue w3-round">
+                <div style="width: 35%; float: right; white-space: nowrap">
+                    <img src="static/github.png" style="height: auto; width: 3.6vw; margin: 10px 0px">
+                    <a href="https://github.com/Luca4444" style="font-size:1.2vw;">Luca4444</a>
+                </div>
+                <div style="width: 65%; float: left; white-space: nowrap">
+                    <img src="static/email-icon.png" style="height: auto; width: 3.6vw;margin: 10px 0px 10px -13px">
+                    <a style="font-size:1.2vw;">luca.boschettig@gmail.com</a>
+                </div>
+            </header>
+            <p style="font-size: 1.2vw; color: gray; margin:15px 15px 15px 15px;padding-bottom: 10px;text-align: center">
+                My name is Luca Boschetti and I'm 19 years old. I was born in Guadalajara, Mexico and currently live in Mexico City.
+                I have an interest in programming for as long as I can remeber and I for the last 5 years I knew this is what
+                I wanted to do for the rest of my life. I currently study at TEC in CDMX and work at Betterware Connect.
+            </p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="sub2">
+            <div class="w3-card w3-round w3-white">
+                <h1 style="font-size:2.5vw;font-family: 'Tourney',sans-serif;">Video Intro</h1>
+            </div>
+        </div>
+    </div>
+
+</div>
+
 </body>
+<script src="pacman.js"></script>
+
+<script>
+    var balls = document.getElementsByClassName("ball");
+    document.onmousemove = () => {
+        var x = (event.clientX * 100) / window.innerWidth + "%";
+        var y = (event.clientY * 100) / window.innerHeight + "%";
+
+        for (let i = 0; i < 2; i++) {
+            balls[i].style.left = x;
+            balls[i].style.top = y;
+            balls[i].transfoorm = "translate(-" + x + ",-" + y + ")";
+        }
+    };
+</script>
 </html>
