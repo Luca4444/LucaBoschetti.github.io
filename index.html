@@ -2,9 +2,7 @@
 <html lang="en" style="background: aliceblue">
 <link href='https://fonts.googleapis.com/css?family=Tourney' rel='stylesheet'>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
 <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
-
 <head>
     <meta charset="UTF-8">
     <title>Luca's Portafolio</title>
@@ -13,14 +11,39 @@
 </head>
 
 <body>
-<div></div>
 
 <div class="row">
-    <div class="column">
-
+    <div id="main-mobile" class="column">
+        <div class="title">
+            <div class="w3-card w3-round w3-white">
+                <h1 class="main-title">Luca's MIT Portafolio</h1>
+            </div>
+        </div>
+        <div class="container">
+            <input class ="pimage w3-round" type="image" src="static/IMG_5609.jpg" style="" onclick="location.href='https://github.com/Luca4444';">
+        </div>
+        <div class="bio w3-card w3-round w3-pale-blue">
+            <header class="w3-container w3-blue w3-round">
+                <div class="bio-column-1">
+                    <img src="static/github.png"  class="bio-git">
+                    <a href="https://github.com/Luca4444" class="bio-contact">Luca4444</a>
+                </div>
+                <div class="bio-column-2">
+                    <img src="static/email-icon.png" class="bio-email">
+                    <a class="bio-contact">luca.boschettig@gmail.com</a>
+                </div>
+            </header>
+            <p class="bio-text">
+                My name is Luca Boschetti and I'm 19 years old. I was born in Guadalajara, Mexico and currently live in Mexico City.
+                I have an interest in programming for as long as I can remeber and I for the last 5 years I knew this is what
+                I wanted to do for the rest of my life. I currently study at TEC in CDMX and work at Betterware Connect.
+            </p>
+        </div>
+    </div>
+    <div id="projects" class="column">
         <div class="sub1">
             <div class="w3-card w3-round w3-white">
-                <h1 style="font-size:2.5vw;font-family: 'Tourney',sans-serif;">Projects</h1>
+                <h1 id="sub1-title">Projects</h1>
             </div>
         </div>
         <a href="https://luca4444.github.io/MIT/src/week7/PacMen%20Exercise/">
@@ -74,46 +97,45 @@
         </a>
     </div>
 
-    <div class="column">
+    <div id="main" class="column">
         <div class="title">
             <div class="w3-card w3-round w3-white">
-                <h1 style="font-size:2.5vw;font-family: 'Tourney',sans-serif;">Luca's MIT Portafolio</h1>
+                <h1 class="main-title">Luca's MIT Portafolio</h1>
             </div>
         </div>
         <div class="container">
-            <input class = "pimage w3-round" type="image" src="static/IMG_5609.jpg" style="" onclick="location.href='https://github.com/Luca4444';">
+            <input class ="pimage w3-round" type="image" src="static/IMG_5609.jpg" style="" onclick="location.href='https://github.com/Luca4444';">
         </div>
-        <div id="bio" class="w3-card w3-round w3-pale-blue">
+        <div class="bio w3-card w3-round w3-pale-blue">
             <header class="w3-container w3-blue w3-round">
-                <div style="width: 35%; float: right; white-space: nowrap">
-                    <img src="static/github.png" style="height: auto; width: 3.6vw; margin: 10px 0px">
-                    <a href="https://github.com/Luca4444" style="font-size:1.2vw;">Luca4444</a>
+                <div class="bio-column-1">
+                    <img src="static/github.png"  class="bio-git">
+                    <a href="https://github.com/Luca4444" class="bio-contact">Luca4444</a>
                 </div>
-                <div style="width: 65%; float: left; white-space: nowrap">
-                    <img src="static/email-icon.png" style="height: auto; width: 3.6vw;margin: 10px 0px 10px -13px">
-                    <a style="font-size:1.2vw;">luca.boschettig@gmail.com</a>
+                <div class="bio-column-2">
+                    <img src="static/email-icon.png" class="bio-email">
+                    <a class="bio-contact">luca.boschettig@gmail.com</a>
                 </div>
             </header>
-            <p style="font-size: 1.2vw; color: gray; margin:15px 15px 15px 15px;padding-bottom: 10px;text-align: center">
+            <p class="bio-text">
                 My name is Luca Boschetti and I'm 19 years old. I was born in Guadalajara, Mexico and currently live in Mexico City.
                 I have an interest in programming for as long as I can remeber and I for the last 5 years I knew this is what
                 I wanted to do for the rest of my life. I currently study at TEC in CDMX and work at Betterware Connect.
             </p>
         </div>
     </div>
-    <div class="column">
+    <div id="video" class="column">
         <div class="sub2">
             <div class="w3-card w3-round w3-white">
-                <h1 style="font-size:2.5vw;font-family: 'Tourney',sans-serif;">Video Intro</h1>
+                <h1 id="sub2-title">Video Intro</h1>
             </div>
         </div>
     </div>
-
 </div>
 
 </body>
-<script src="pacman.js"></script>
 
+<script src="pacman.js"></script>
 <script>
     var balls = document.getElementsByClassName("ball");
     document.onmousemove = () => {

@@ -3,8 +3,6 @@ html, body {
     height:100%;
     margin: 0;
 }
-
-
 body {
     background: linear-gradient(-45deg, #ee7752, #e73c3c, #23a6d5, #23d5ab);
     background-size: 400% 400%;
@@ -12,9 +10,7 @@ body {
     display: block;
     overflow: auto;
     font-family: 'Arvo', serif;
-
 }
-
 .title{
     animation: slide 2s ease 0s forwards;
     opacity: 0;
@@ -22,10 +18,12 @@ body {
     margin-top:20px;
     padding: 0;
     font-family: 'Tourney',sans-serif;
-
     white-space: nowrap;
 }
-
+.main-title{
+    font-size:2.5vw;
+    font-family: 'Tourney',sans-serif;"
+}
 .sub1{
     animation: slide 2s ease 0s forwards;
     opacity: 0;
@@ -33,11 +31,12 @@ body {
     margin-top:60px;
     padding: 30px;
     padding-bottom: 0;
-
-
     white-space: nowrap;
 }
-
+#sub1-title{
+    font-size:2.5vw;
+    font-family: 'Tourney',sans-serif;
+}
 .sub2{
     animation: slide 2s ease 0s forwards;
     opacity: 0;
@@ -48,23 +47,19 @@ body {
     font-size:3vw;
     white-space: nowrap;
 }
-
+#sub2-title{
+    font-size:2.5vw;
+    font-family: 'Tourney',sans-serif;
+}
 .container{
     animation: appear 2s linear .2s forwards;
     opacity: 0;
     display: flex;
-
-
     justify-content: center;
-
-
 }
-
 .cards{
     margin: 15px 40px;
-
 }
-
 .card-text-title{
     font-family: 'Arvo', serif;
     font-size:1.5vw;
@@ -72,8 +67,6 @@ body {
     display: inline-block;
 
 }
-
-
 #PacMan{
     height: auto;
     width: 4vw;
@@ -83,15 +76,12 @@ body {
     max-width: 40px;
     position: absolute;
 }
-
 #head-pac{
     position: relative;
 }
-
 #eye-container{
     position: relative;
 }
-
 .card-text{
     font-family: 'Arvo', serif;
     font-size:1.2vw;
@@ -100,61 +90,77 @@ body {
     color:gray;
     margin-left: 1vw;
     margin-right: 1vw;
-
 }
-
 #pac-container{
     display: inline-block;
 }
-
-#bio{
+.bio{
     margin-top: 1vw;
 }
-
+.bio-text{
+    font-size: 1.2vw;
+    color: gray;
+    margin:15px 15px 15px 15px;
+    padding-bottom: 10px;
+    text-align: center
+}
+.bio-contact{
+    font-size:1.2vw;
+}
+.bio-column-1{
+    width: 35%;
+    float: right;
+    white-space: nowrap
+}
+.bio-column-2{
+    width: 65%;
+    float: left;
+    white-space: nowrap
+}
+.bio-git{
+    height: auto;
+    width: 3.6vw;
+    margin: 10px 0;
+}
+.bio-email{
+    height: auto;
+    width: 3.6vw;
+    margin: 10px 0px 10px -13px
+}
 #hanoi{
     height: auto;
     width: 6vw;
     display: inline-block;
     margin-left: 4vw;
 }
-
 #bus{
     height: auto;
     width: 4vw;
     display: inline-block;
 }
-
 .pimage{
-
     height: auto;
     width: 100%;
-
     max-width: 400px;
-
     margin-left: auto;
     margin-right: auto;
     border: 5px solid #555;
     margin-top: 10px;
 }
-
-
 .column {
     float: left;
     width: 33.33%;
 }
-
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
-
 .eyes {
     position: absolute;
     margin-top: 1.2vw;
     width: 100%;
     display: inline-block;
-
 }
 .eye {
     width: 4vw;
@@ -176,7 +182,102 @@ body {
     transform: translate(-50%, -50%);
     border-radius: 50%;
 }
-
+#main-mobile {
+    display: none;
+}
+@media (max-width:320px){
+    #main {
+        display: none;
+    }
+    #main-mobile {
+        display: block;
+    }
+    .column {
+        float: left;
+        width: 100%;
+    }
+    .sub2{
+        margin-top: 0;
+    }
+    #sub2-title{
+        font-size:10vw;
+    }
+    .sub1{
+        margin-top: -30px;
+        margin-bottom: 20px;
+    }
+    #sub1-title{
+        font-size:10vw;
+    }
+    .title{
+        margin-top: 0;
+        padding: 30px;
+        white-space: normal;
+    }
+    .main-title{
+        font-size:10vw;
+    }
+    .card-text{
+        font-size: 4vw;
+    }
+    .card-text-title{
+        font-size: 6vw;
+    }
+    .bio{
+        margin: 30px 40px 0 40px;
+    }
+    .bio-text{
+        font-size: 4vw;
+    }
+    .bio-contact{
+        font-size:4.6vw;
+    }
+    .bio-column-1{
+        white-space: normal;
+        width: 100%;
+    }
+    .bio-column-2{
+        white-space: normal;
+        width: 100%;
+    }
+    .bio-git{
+        width: 8vw;
+        margin: 10px 10px;
+    }
+    .bio-email{
+        width: 8vw;
+        margin: 10px 10px;
+    }
+    #PacMan{
+        width: 12vw;
+        margin-top: 6vw;
+    }
+    #hanoi{
+        width: 24vw;
+        margin-left: 8vw;
+        margin-bottom: 4vw;;
+    }
+    #bus{
+        width: 10vw;
+        margin-bottom: 2.5vw;
+    }
+    .eyes {
+        margin-top: 6.5vw;
+        margin-left: 3vw;
+    }
+    .eye {
+        width: 14vw;
+        height: 7vw;
+        margin: 1vw;
+    }
+    .ball {
+        width: 5vw;
+        height: 5vw;
+    }
+    .pimage{
+        margin-top: 0;
+    }
+}
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -188,7 +289,6 @@ body {
         background-position: 0% 50%;
     }
 }
-
 @keyframes slide {
     0% {
         opacity: 0%;
