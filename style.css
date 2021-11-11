@@ -294,6 +294,10 @@ body {
 
         border: 5px solid #ddd;
     }
+    .container{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
 }
 @keyframes gradient {
     0% {
